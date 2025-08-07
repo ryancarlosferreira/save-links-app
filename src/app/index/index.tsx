@@ -19,7 +19,6 @@ export default function Index(){
                     <MaterialIcons name="add" size={32} color={colors.green[300]} />
                 </TouchableOpacity> 
             </View>
-
             <Categories />
 
             <FlatList 
