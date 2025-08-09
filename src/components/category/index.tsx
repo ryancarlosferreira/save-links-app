@@ -4,6 +4,8 @@ import { MaterialIcons } from "@expo/vector-icons"
 import { colors } from "@/styles/colors"
 import { styles } from "./styles"
 
+// o que é?
+// um pressable que recebe todas as propriedades de um pressable
 type Props = PressableProps & {
     name: string
     isSelected: boolean
