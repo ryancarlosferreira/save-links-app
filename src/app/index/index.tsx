@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react"
+import { useState,useCallback } from "react"
 import { View, Image, TouchableOpacity, FlatList, Modal, Text, Alert } from "react-native"
 import { MaterialIcons } from "@expo/vector-icons"
-import { router } from "expo-router"
+import { router, useFocusEffect } from "expo-router"
 
 import { styles } from "./styles"
 import { colors } from "@/styles/colors"
@@ -25,9 +25,11 @@ export default function Index(){
         }
     }
 
-    useEffect(() => {
-        getLinks()
-    }, [category])
+    useFocusEffect(
+        useCallback(() => {
+            getLinks()
+        }, [])
+    )
 
     return(
         <View style={styles.container}>
